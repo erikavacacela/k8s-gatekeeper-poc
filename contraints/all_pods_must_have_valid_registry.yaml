@@ -1,0 +1,11 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sValidRegistry
+metadata:
+  name: images-must-have-valid-registry
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Pod"]
+  parameters:
+    registry: "evacacela/"

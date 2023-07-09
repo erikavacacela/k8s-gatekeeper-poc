@@ -40,7 +40,7 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
 
     - name: Build, tag, and push image to Amazon ECR
-      working-directory: ./examples/good/web-pp
+      working-directory: ./examples/good/web-app
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: ${{ env.IMAGE_NAME }}
